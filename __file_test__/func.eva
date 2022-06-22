@@ -1,0 +1,19 @@
+//----------------------------------function defined but not called-----------------------------------------
+
+(def factorial (x)
+    (if (= x 1)
+        1
+    (* x (factorial (- x 1)))))
+
+
+//----------------------------------functions can use the values of other functions------------------------
+//nCr function takes value recieved from the factorial function
+
+(def nCr(n r)
+        (/ (factorial n)    (*  (factorial r)   (factorial(- n r)   )) )
+)
+
+(var x 24)
+(var y 3)
+(print "nCr" x "and" y "is")
+(print (nCr x y))

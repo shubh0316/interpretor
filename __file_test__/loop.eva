@@ -1,0 +1,18 @@
+
+//-------------------------- A simple looping example----------------------------------
+(def loop (n)
+    (begin
+            (while  (> n 0)
+                (begin
+                    (print n)
+                    (set n (- n 1))
+                )
+        )
+    )
+        result  
+)
+
+//-------------------------- function called here----------------------------------
+(loop 100)
+
+(print (*   (loop 100)  (loop 10)   ) "since loops return value")

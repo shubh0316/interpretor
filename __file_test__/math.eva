@@ -1,0 +1,24 @@
+
+( var x 10)
+(var y 5)
+(print(+ (* x 10) y))                                                           //print( (x * 10) + y)  ie ( (10 * 10) + 5)
+
+(set y (/ x y))                                                                 // y = x / y  ie 10 / 5 = 2 
+(print y)
+
+//--------------------------local scope---------------------------------------
+// here var x is not 10, but 44 as defined in the local scope
+
+(begin
+    (var x 44)
+    (print (+ x y))                                                             // x + y ie 44 + 2
+)
+
+//--------------------------nested expressions--------------------------------
+
+(begin
+    (var x 12)
+    (var z 200)
+    (set z (- x (- z y)))                                                       // z = (x - (z - y) ) ie ( 12 - ( 200 - 2) )
+    (print z)
+)

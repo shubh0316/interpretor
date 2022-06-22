@@ -1,0 +1,18 @@
+(var bigger 100)
+(var smaller 34)
+
+(var result 0)
+
+(begin
+    (if (> bigger smaller)
+        (set result bigger)
+    )
+    (print "bigger=" bigger "and smaller=" smaller "so" bigger ">" smaller)
+)
+
+(begin
+    (if (> bigger smaller)
+        (set result 0)
+    )
+    (print result)
+)

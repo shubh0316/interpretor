@@ -1,0 +1,23 @@
+(var max 0)
+(var a 104)
+(var b 12)
+
+//-----------------------------------------to calculate maximum of two numbers------------------------------------------------
+                                                                                
+(if (> a b)                                                                     // if(a>b)
+    (set max a)                                                                 // max = a
+(set max b)                                                                     // else max = b
+)
+(print "max between" a "and" b "is" max)
+
+//-----------------------------------------to calculate passing grade---------------------------------------------------------
+
+(def ispass (CGPA)                                                              //def ispass(CGPA)
+    (if (>= CGPA 6)                                                             //      if(CGPA >=6)
+        "pass"                                                                  //          return "pass"
+    "fail"                                                                      //      return "fail"
+))
+
+
+(print (ispass 7))
+(print (ispass 5))
